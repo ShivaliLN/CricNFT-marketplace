@@ -64,7 +64,11 @@ function App() {
 		tokenId: 4,
 	  }
 
-	 
+	  const nftProperty5 = {
+		imageUrl: "https://ipfs.io/ipfs/QmQBYKQyEHdJ51aMpnfwrhZKVj448f4gyTqh75w4rbSvB3",
+		rate: 0.1,
+		tokenId: 5,
+	  }
 	  
 
 	const getNFT = async () => {
@@ -76,9 +80,9 @@ function App() {
 		  //console.log(results[0][0].attributes.teamAddress)
 		  //console.log(results[0][0].attributes.seasonId)
 		  console.log(results)
-		  console.log(results[0][3].attributes.imageCID)
-		  console.log(web3.utils.fromWei(results[0][3].attributes.rate))
-		  console.log(results[0][3].attributes.supply)		  
+		  console.log(results[0][4].attributes.imageCID)
+		  console.log(web3.utils.fromWei(results[0][4].attributes.rate))
+		  console.log(results[0][4].attributes.supply)		  
 		  //console.log(res);
 	};
 	
@@ -233,6 +237,16 @@ function App() {
 							<UnorderedList>
   							<ListItem>Token Id: {nftProperty4.tokenId}</ListItem>
   							<ListItem>Rate: {nftProperty4.rate} (ETH/MATIC)</ListItem>
+ 							</UnorderedList>    
+          				</Box>
+					</Box>
+
+					<Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
+      					<Image  borderRadius="full"  boxSize="200px"src={nftProperty5.imageUrl}/>            
+          				<Box>
+							<UnorderedList>
+  							<ListItem>Token Id: {nftProperty5.tokenId}</ListItem>
+  							<ListItem>Rate: {nftProperty5.rate} (ETH/MATIC)</ListItem>
  							</UnorderedList>    
           				</Box>
 					</Box>
